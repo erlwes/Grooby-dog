@@ -1284,10 +1284,10 @@ else {
 
 #Loop of infinite party!
 while ($frameCount -le $length) {
-    
+
     #Reset cursor position, so that last frame will be replaced by new one
-    $host.ui.rawui.CursorPosition = $curCursorPos            
-    
+    $host.ui.rawui.CursorPosition = $curCursorPos
+
     #Render next frame and pick a random color
     Write-Host "$([string]$Frames[$frameCount])"-NoNewline -ForegroundColor $Colors[(Get-Random -Minimum 0 -Maximum 7)]
 
@@ -1304,7 +1304,6 @@ while ($frameCount -le $length) {
     else {
         if ($frameCount -gt 32 -and $frameCount -lt 40){
             clear
-        }   
+        }
     }
-     
 }
